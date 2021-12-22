@@ -61,6 +61,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd api_yamdb_final/
+            sudo docker pull torolfr/yamdb_final:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
