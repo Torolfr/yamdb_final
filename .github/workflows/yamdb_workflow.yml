@@ -43,9 +43,10 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
-          file: ./api_yamdb/ 
           push: true
           tags: torolfr/yamdb_final:latest
+          context: api_yamdb
+          file: api_yamdb/Dockerfile 
 
   # deploy:
   #   runs-on: ubuntu-latest
