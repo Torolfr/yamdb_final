@@ -10,8 +10,7 @@ services:
       - ./.env
   
   web:
-    build: 
-      context: ../api_yamdb/
+    image: torolfr/yamdb_final
     restart: always
     volumes:
       - static_value:/app/static/
