@@ -64,5 +64,5 @@ docker-compose exec web python manage.py loaddata fixtures.json
 ### Контакты
 - [**Github**](https://github.com/Torolfr/)
 - **email**: torolfr@yandex.ru
-![workflow status](https://github.com/Torolfr/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+- [workflow status](https://github.com/Torolfr/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 ***
