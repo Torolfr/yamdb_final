@@ -34,7 +34,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1 
+        uses: docker/setup-buildx-action@v1
       - name: Login to Docker 
         uses: docker/login-action@v1 
         with:
@@ -43,6 +43,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
+          file: ./api_yamdb/ 
           push: true
           tags: torolfr/yamdb_final:latest
 
@@ -84,7 +85,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.workflow }} Образ успешно загружен в DockerHub!
+        message: ${{ github.workflow }} Образ успешно загружен создан и загружен в DockerHub!
 
   # send_message:
   #   runs-on: ubuntu-latest
